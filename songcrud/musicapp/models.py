@@ -15,7 +15,7 @@ class Meta:
 class Song(models.Model):  
   title = models.CharField(max_length=200)  
 date_released= models.CharField(max_length=100)  
-likes = models.ForeignKey(on_delete=models.CASCADE)  
+likes = models.ForeignKey(unique=true, on_delete=models.CASCADE)  
 artiste_id = models.CharField(max_length=20)  
 class Meta:  
         db_table = "song"  
